@@ -1,0 +1,43 @@
+.box-center {
+    @extend %center;
+    @extend %pd-tb;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    .title-center {
+        text-transform: capitalize;
+        color: var(--mainColor);
+        font: {
+            weight: normal;
+            size: 1.675rem;
+        }
+        margin-bottom: 1rem;
+        @include Sm {
+            font-size: 1.475rem;
+        }
+        @include verySm {
+            font-size: 1.175;
+        }
+    }
+    .para-center {
+        color: #585858;
+        line-height: 1.6;
+        font-size: 1.175rem;
+        margin-bottom: .8rem;
+        @include Sm {
+            font-size: 1rem;
+        }
+        @include verySm {
+            font-size: .9rem;
+        }
+    }
+    .line-center {
+        display: block;
+        width: 80px;
+        height: 5px;
+        background-color: var(--mainColor);
+        margin: auto;
+        @include Sm {
+            width: 60px;
+        }
+    }
+}

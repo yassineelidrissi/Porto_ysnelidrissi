@@ -1,0 +1,73 @@
+.setting-box {
+    position: fixed;
+    top: 50%;
+    left: -250px;
+    width: 250px;
+    min-height: 30vh;
+    background-color: #FFF;
+    z-index: 9;
+    transition: all .4s ease;
+    border: 1px solid #EEE;
+    transform: translateY(-50%);
+    .set-icon {
+        background-color: var(--mainColor);
+        position: absolute;
+        top: 30px;
+        right: -40px;
+        @extend %center;
+        cursor: pointer;
+        // z-index: 99;
+        i {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 1.2rem;
+            color: $white;
+        }
+    }// End Set Icon
+    .container-box {
+        .option-box {
+            width: 200px;
+            padding: 10px 10px 20px;
+            margin: 10px auto;
+            background-color: #e6e6e6;
+            @extend %center;
+            h2 {
+                color: #666;
+                margin-bottom: .8rem;
+                text-transform: capitalize;
+            }
+            li {
+                width: 20px;
+                height: 20px;
+                background-color: #666;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: .1rem;
+                cursor: pointer;
+                opacity: .5;
+            }
+            .active {
+                opacity: 1;
+            }
+            .list-one {
+                background-color: #fe0000;
+            }
+            .list-two {
+                background-color: #FF9800;
+            }
+            .list-three {
+                background-color: #03A9F4;
+            }
+            .list-four {
+                background-color: #4CAF50;
+            }
+            .list-five {
+                background-color: #009688;
+            }
+        }// End Option Box
+    }// End Container Box
+}// End Setting Box
+.open {
+    left: 0;
+}

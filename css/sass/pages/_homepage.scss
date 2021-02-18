@@ -1,0 +1,176 @@
+.header-content {
+    .hero-content {
+        height: 100vh;
+        display: flex;
+        position: relative;
+        // background-color: #CCC;
+        .content {
+            flex: 1;
+            margin-top: 30vh;
+            padding-left: 3.75rem;
+            @include Md {
+                padding-left: 2.50rem;
+            }
+            @include Sm {
+                padding-left: 2rem;
+            }
+            h2 {
+                font: {
+                    weight: normal;
+                    size: 60px;
+                }
+                color: $subColor;
+                span {
+                    color: var(--mainColor);
+                }
+                @include Md {
+                    font-size: 40px;
+                }
+                @include Sm {
+                    font-size: 30px;
+                }
+                @include Xx {
+                    font-size: 45px;
+                }
+                @include Xs {
+                    font-size: 45px;
+                }
+                @include verySm {
+                    font-size: 35px;
+                }
+            }
+            .eli {
+                display: block;
+                color: $subColor;
+                margin-bottom: 2rem;
+                font: {
+                    // weight: bold;
+                    size: 91px;
+                }
+                @include Md {
+                    font-size: 60px;
+                }
+                @include Sm {
+                    font-size: 40px;
+                }
+                @include Xx {
+                    font-size: 45px;
+                }
+                @include Xs {
+                    font-size: 68px;
+                }
+                @include verySm {
+                    font-size: 53px;
+                }
+            }
+            p {
+                // max-width: 80%;
+                color: $subColor;
+                font-size: 1.150rem;
+                line-height: 1.7;
+                margin-bottom: 2rem;
+                @include Sm {
+                    font-size: 1rem;
+                    line-height: 1.5;
+                }
+                @include Xx {
+                    font-size: .9rem;
+                }
+                @include Xs {
+                    font-size: .9rem;
+                }
+            }
+            button {
+                all: unset;
+                width: 12.5rem;
+                height: 50px;
+                line-height: 50px;
+                background-color: var(--mainColor);
+                color: $white;
+                text-align: center;
+                font: {
+                    weight: 600;
+                    size: 18px;
+                }
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                cursor: pointer;
+                // box-shadow: 0px 4px 15px 0px rgba(#FE0000, .7);
+                box-shadow: 0px 5px 10px 0px var(--mainColor);
+                @include Xs {
+                    width: 10rem;
+                }
+            }
+        }
+        .image {
+            flex: 1;
+            // background-color: magenta;
+            @extend %center;
+            img {
+                padding-top: 20vh;
+                @include Md {
+                    width: 300px;
+                    height: 500px;
+                    transform: translateY(90px);
+                }
+                @include Sm {
+                    width: 250px;
+                    height: 400px;
+                    transform: translateY(120px);
+                }
+            }// End img
+            @include Xs {
+                display: none;
+            }
+        }
+    }
+    /* -------------- START ANIMATE SCROLL -------------- */
+    .animate-scroll {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        width: 30px;
+        height: 55px;
+        background-image: transparent;
+        border: 2px solid var(--mainColor);
+        border-radius: 20px;
+        cursor: pointer;
+        > span {
+            display: block;
+            width: 4px;
+            height: 8px;
+            background-color: var(--mainColor);
+            border-radius: 5px;
+            position: relative;
+            top: 8px;
+            margin: auto;
+            animation: scroll 2s ease-in-out infinite;
+        }
+        @keyframes scroll {
+            0% {
+                opacity: 0;
+                top: 5px;
+            }
+            25% {
+                opacity: 1;
+                top: 10px;
+            }
+            50% {
+                opacity: 0;
+                top: 15px;
+            }
+            75% {
+                opacity: 1;
+                top: 20px;
+            }
+            100% {
+                opacity: 0;
+                top: 25px;
+            }
+        }
+        @include Md {
+            z-index: 2;
+        }
+    }
+    /* -------------- END ANIMATE SCROLL -------------- */
+}// End Header Content

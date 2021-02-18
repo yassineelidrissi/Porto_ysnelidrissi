@@ -1,0 +1,112 @@
+.service {
+    padding-bottom: 5rem;
+    .service-parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .service-item {
+            width: calc(25% - 30px);
+            height: 300px;
+            padding: 2rem 0;
+            box-shadow: 0px 15px 20px rgba($black, .2);
+            margin-bottom: 2rem;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--mainColor);
+                opacity: .1;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform .5s ease;
+            }
+            &:hover::before {
+                transform: scaleY(1);
+                transform-origin: bottom;
+                transition: transform .5s ease;
+            }
+            // &:hover {
+            //     .ser-icon {
+            //         i {
+            //             color: $white;
+            //             z-index: 2;
+            //         }
+            //     }
+            // }
+            // &:hover:before {
+            //     transform: scaleY(1);
+            //     transform-origin: bottom;
+            //     transition: transform .5s ease;
+            // }
+            @include Lg {
+                width: calc(32% - 30px);
+            }
+            @include Md {
+                width: calc(50% - 30px);
+            }
+            @include Sm {
+                width: calc(50% - 30px);
+            }
+            @include Xs {
+                width: 100%;
+            }
+            .ser-icon {
+                @extend %center;
+                i {
+                    display: block;
+                    font: {
+                        weight: 600;
+                        size: 3.438rem;
+                    }
+                    color: var(--mainColor);
+                    margin-bottom: 1rem;
+                }
+            }
+            .ser-info {
+                padding-left: 2rem;
+                padding-right: 1rem;
+                h4 {
+                    font-size: 26px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    margin-bottom: 1rem;
+                    color: $subColor;
+                    @include Lg {
+                        font-size: 24px;
+                        margin-bottom: .9rem;
+                    }
+                    @include Md {
+                        font-size: 24px;
+                        margin-bottom: .9rem;
+                    }
+                    @include Sm {
+                        font-size: 21px;
+                        margin-bottom: .7rem;
+                    }
+                }
+                p {
+                    line-height: 1.6;
+                    font-size: 22px;
+                    color: $subColor;
+                    @include Lg {
+                        font-size: 20px;
+                        line-height: 1.5;
+                    }
+                    @include Md {
+                        font-size: 20px;
+                        line-height: 1.5;
+                    }
+                    @include Sm {
+                        line-height: 1.6;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }// End Service Parent
+}// End Services

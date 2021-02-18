@@ -1,0 +1,20 @@
+@import "sass/helpers/variable";
+@import "sass/helpers/mixin";
+@import "sass/helpers/extending";
+
+@import "sass/layout/globalrules";
+@import "sass/layout/grid";
+
+@import "sass/components/boxcenter";
+@import "sass/components/buttons";
+@import "sass/components/setting-box";
+@import "sass/components/bullets";
+@import "sass/components/shapes";
+
+@import "sass/layout/header";
+@import "sass/pages/homepage";
+@import "sass/pages/services";
+@import "sass/pages/projects";
+@import "sass/pages/skills";
+@import "sass/pages/about";
+@import "sass/layout/footer";

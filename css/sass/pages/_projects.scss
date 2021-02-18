@@ -1,0 +1,58 @@
+.projects {
+    padding-bottom: 5rem;
+    // background-color: #CCC;
+    .projects-parent {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+        gap: 1.875rem;
+        .projects-item {
+            background-color: #FFF;
+            box-shadow: 0px 3px 12px rgba($black, 0.15);
+            cursor: default;
+            &:hover {
+                transform: scale(1.05);
+                transition: all 250ms ease-in-out;
+            }
+            .pr-image {
+                height: 15.625rem;
+                background-size: 100% 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            .img-one {
+                background-image: url("../images/invit.jpg");
+            }
+            .img-two {
+                background-image: url("../images/remod.jpg");
+            }
+            .img-three {
+                background-image: url("../images/acces.jpg");
+            }
+            .img-four {
+                background-image: url("../images/video.jpg");
+            }
+            .pr-info {
+                padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+                div {
+                    color: #717171;
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                    span {
+                        color: var(--mainColor);
+                    }
+                }
+                h4 {
+                    font-size: 1.125rem;
+                    line-height: 1.4;
+                    color: $subColor;
+                    margin: 1rem 0;
+                }
+                p {
+                    line-height: 1.6;
+                    font-size: 1rem;
+                    color: #717171;
+                }
+            }
+        }
+    }
+}// End Projects

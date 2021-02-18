@@ -1,0 +1,10 @@
+Colors:
+mainColor: #FE0000;
+$subColor: #565656;
+Fonts:
+font-famiy: Play;
+font-size: 16px;
+Screen:
+Desktop (1440px)
+Tablet (768px)
+Mobile(375px)

@@ -1,0 +1,17 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    // filter: invert(1) hue-rotate(180deg);
+}
+
+body {
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+    // height: 5000px;
+    // background-color: #FFF;
+}

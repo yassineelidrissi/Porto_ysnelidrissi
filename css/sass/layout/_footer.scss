@@ -1,0 +1,29 @@
+.footer {
+    padding: 2rem 0;
+    background-color: $subColor;
+    .footer-parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include Sm {
+            display: block;
+            text-align: center;
+        }
+        .ft-item {
+            color: $white;
+            text-transform: capitalize;
+            font-size: 1.2rem;
+            @include Sm {
+                margin-bottom: .5rem;
+            }
+            @include Xs {
+                font-size: 1rem;
+            }
+        }
+        .footer-right {
+            i {
+                color: var(--mainColor);
+            }
+        }
+    }
+}// End Footer

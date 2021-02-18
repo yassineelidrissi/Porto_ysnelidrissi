@@ -1,0 +1,41 @@
+@mixin verySm {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin Xs {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin Xx{
+    @media (min-width: 576px) and (max-width: 675px) {
+        @content;
+    }
+}
+
+@mixin Sm {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin Md {
+    @media (min-width: 769px) and (max-width: 1070px) {
+        @content;
+    }
+}
+
+@mixin Lg {
+    @media (min-width: 1071px) and (max-width: 1550px) {
+        @content;
+    }
+}
+
+@mixin Xg {
+    @media (min-width: 1126px) {
+        @content;
+    }
+}

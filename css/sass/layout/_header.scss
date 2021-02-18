@@ -1,0 +1,155 @@
+.header {
+    padding: 25px 0;
+    background-color: $white;
+    box-shadow: 0px 18px 30px rgba($black, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    .header-stl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            h1 {
+                color: var(--mainColor);
+                @include verySm {
+                    font-size: 25px;
+                }
+            }
+        }
+        .nav {
+            @extend %list-unstyled;
+            @include Md {
+                height: 100vh;
+                width: 100%;
+                background-color: var(--mainColor);
+                position: fixed;
+                top: 0;
+                left: 0;
+                padding: 40px 0;
+                text-align: center;
+                padding-top: 90px;
+                transition: all 1s ease-in-out;
+                clip-path: circle(150px at 90% -30%);
+                z-index: 999;
+            }
+            @include Sm {
+                height: 100vh;
+                width: 100%;
+                background-color: var(--mainColor);
+                position: fixed;
+                top: 0;
+                left: 0;
+                padding: 40px 0;
+                text-align: center;
+                padding-top: 90px;
+                transition: all 1s ease-in-out;
+                clip-path: circle(150px at 90% -30%);
+                z-index: 999;
+            }
+            li {
+                display: inline-block;
+                padding: 10px 20px;
+                position: relative;
+                @include Md {
+                    display: block;
+                    margin: 60px 0;
+                }
+                @include Sm {
+                    display: block;
+                    margin: 60px 0;
+                }
+                font: {
+                    // weight: $bold;
+                    size: 1.563rem;
+                }
+                a {
+                    text-decoration: none;
+                    color: $subColor;
+                    text-transform: capitalize;
+                    @include Md {
+                        color: $white;
+                    }
+                    @include Sm {
+                        color: $white;
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 0%;
+                        height: 4px;
+                        background-color: var(--mainColor);
+                        margin-top: 5px;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                        @extend %trans;
+                    }
+                    &:hover {
+                        color: var(--mainColor);
+                        @extend %trans;
+                        @include Md {
+                            color: $white;
+                        }
+                        @include Sm {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .open {
+            clip-path: circle(1250px at 90% -30%);
+        }
+        .menu {
+            display: none;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            @extend %center;
+            position: relative;
+            z-index: 1000;
+            i {
+                font-size: 2.188rem;
+                line-height: 50px;
+                color: $subColor;
+                @include verySm {
+                    font-size: 1.7rem;
+                }
+            }
+            @include Md {
+                display: block;
+            }
+            @include Sm {
+                display: block;
+            }
+        }
+    }// End Header STl
+}//End Header
+// START STICKY HEADER
+.sticky {
+    padding: 20px 0;
+    background-color: var(--mainColor);
+    box-shadow: 0px 18px 30px rgba(#FE0000, 0.09);
+    transition: all .4s ease-in;
+    .header-stl {
+        .logo {
+            h1 {
+                color: $white;
+            }
+        }
+        .nav {
+            li {
+                a {
+                    color: $white;
+                }
+                &:hover a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+// END STICKY HEADER
